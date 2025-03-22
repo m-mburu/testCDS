@@ -84,4 +84,16 @@ plt.legend(handles=[
 plt.show()
 ```
 
+## Linear Models
+ - Use mtcars dataset
+
+```{r}
+
+data(mtcars)
+
+model <- lm(mpg ~ hp, data = mtcars)
+
+summary(model)
+
+```
 
