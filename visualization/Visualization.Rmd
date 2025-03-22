@@ -1,0 +1,16 @@
+---
+title: "Visualization"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+data(mpg)
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) + 
+  geom_point()
+```
