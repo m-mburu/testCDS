@@ -41,3 +41,47 @@ def bubble_sort(arr):
 
 ```
 
+
+## Plot
+
+- Iris data set in R
+
+```{R}
+library(ggplot2)
+data(iris)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
+  geom_point()
+write.csv(iris, "iris.csv")
+```
+
+- use matplotlib in python
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+iris = pd.read_csv("iris.csv")
+ Define colors for each species
+color_map = {
+    "setosa": "red",
+    "versicolor": "green",
+    "virginica": "blue"
+}
+
+# Map species to colors
+colors = iris["Species"].map(color_map)
+
+# Plot
+plt.figure(figsize=(8, 6))
+plt.scatter(iris["Sepal.Length"], iris["Sepal.Width"], c=colors)
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.title("Sepal Length vs Sepal Width by Species")
+plt.legend(handles=[
+    plt.Line2D([0], [0], marker='o', color='w', label='setosa', markerfacecolor='red', markersize=10),
+    plt.Line2D([0], [0], marker='o', color='w', label='versicolor', markerfacecolor='green', markersize=10),
+    plt.Line2D([0], [0], marker='o', color='w', label='virginica', markerfacecolor='blue', markersize=10)
+])
+plt.show()
+```
+
+
