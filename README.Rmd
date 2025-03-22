@@ -60,7 +60,7 @@ write.csv(iris, "iris.csv")
 import matplotlib.pyplot as plt
 import pandas as pd
 iris = pd.read_csv("iris.csv")
- Define colors for each species
+#Define colors for each species
 color_map = {
     "setosa": "red",
     "versicolor": "green",
