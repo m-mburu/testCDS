@@ -56,7 +56,7 @@ write.csv(iris, "iris.csv")
 
 - use matplotlib in python
 
-```{python}
+```{python, eval=FALSE}
 import matplotlib.pyplot as plt
 import pandas as pd
 iris = pd.read_csv("iris.csv")
@@ -95,5 +95,13 @@ model <- lm(mpg ~ hp, data = mtcars)
 
 summary(model)
 
+```
+
+## T-test
+
+```{r}
+t_test_result <- t.test(mpg ~ am, data = mtcars)
+
+print(t_test_result)
 ```
 
